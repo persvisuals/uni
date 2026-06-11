@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>UniRent Landing Page</title>
+<style>
+:root{--blue:#102d9b;--blue2:#061142;--btn:#1132a9;--text:#11131c;--muted:#71727c;--soft:#f0f0f0;--card:#071033}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:'Inter Tight',Arial,sans-serif;color:var(--text);background:#fff}a{text-decoration:none;color:inherit}.container{width:min(1140px,calc(100% - 52px));margin:0 auto}.hero{background:linear-gradient(180deg,#1432a0 0%,#102887 45%,#050915 100%);min-height:775px;position:relative;overflow:hidden}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;color:#fff}.logo{font-size:26px;font-weight:900;font-style:italic;letter-spacing:-1.4px}.navlinks{display:flex;gap:31px;font-size:11px;font-weight:500;align-items:center}.booking{background:#fff;border-radius:8px;margin-top:0;padding:25px 27px 25px;box-shadow:0 18px 55px rgba(0,0,0,.18);position:relative;z-index:3}.tabs{display:flex;gap:8px;margin-bottom:20px}.tab{border:0;border-radius:999px;padding:10px 19px;font:700 12px 'Inter Tight';background:#eee;color:#111}.tab.active{background:var(--btn);color:#fff}.booking-grid{display:grid;grid-template-columns:1.08fr .78fr .78fr .78fr .78fr;gap:0;align-items:end}.field-label{display:block;font-size:9px;font-weight:800;margin-bottom:8px;color:#111}.input{height:58px;border:1px solid #cfd1d9;background:#fff;display:flex;align-items:center;gap:10px;padding:0 15px;font-size:13px}.input.round-left{border-radius:8px 0 0 8px}.input.round-right{border-radius:0 8px 8px 0}.input svg{width:16px;height:16px}.return-location{font-size:12px;color:#81818a;margin:0 16px 0 22px;white-space:nowrap;align-self:center}.corp{font-size:10px;font-weight:800;margin:19px 0 7px}.reserve{height:41px;padding:0 22px;border:0;border-radius:7px;background:var(--btn);color:#fff;font:700 12px 'Inter Tight';display:inline-flex;gap:9px;align-items:center}.hero-car{position:absolute;left:50%;bottom:-8px;transform:translateX(-50%);width:min(710px,70vw);z-index:1}.badge{position:absolute;z-index:2;top:390px;width:275px;min-height:132px;border-radius:8px;background:rgba(67,95,190,.62);color:#fff;padding:27px 20px}.badge.left{left:calc(50% - 520px)}.badge.right{right:calc(50% - 520px)}.badge svg{width:25px;height:25px;margin-bottom:12px}.badge h3{font-size:20px;line-height:1;font-weight:800;margin-bottom:7px}.badge p{font-size:10px;color:rgba(255,255,255,.78)}.why{padding:50px 0 0;position:relative;overflow:hidden}.title{text-align:center;margin-bottom:45px}.title h2{font-size:27px;letter-spacing:-.5px;margin-bottom:13px}.title p{font-size:12px;color:#777}.why-wrap{position:relative;min-height:315px}.features{width:58%;display:grid;grid-template-columns:1fr 1fr;gap:12px}.feature{background:#112e9c;color:#fff;border-radius:7px;padding:20px 18px;min-height:104px}.feature.wide{grid-column:1/3;min-height:124px}.feature svg{width:24px;height:24px;margin-bottom:12px}.feature h3{font-size:15px;margin-bottom:9px}.feature p,.feature li{font-size:10px;line-height:1.45;color:rgba(255,255,255,.75)}.feature ul{padding-left:14px}.why-car{position:absolute;right:-60px;bottom:-12px;width:635px;max-width:58%;z-index:2}.fleet{background:#eee;padding:54px 0 53px}.filters{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.pill{background:#fff;border-radius:999px;padding:10px 17px;font-size:12px;display:inline-flex;gap:8px;margin-right:8px;align-items:center}.toggle{background:#fff;border-radius:999px;padding:8px 12px;font-size:12px;display:flex;align-items:center;gap:8px}.switch{width:31px;height:17px;border-radius:99px;background:#2540b8;position:relative}.switch:after{content:"";width:11px;height:11px;background:#fff;border-radius:50%;position:absolute;right:3px;top:3px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.car-card{background:#08102f;border-radius:7px;overflow:hidden;color:#fff;min-height:221px;padding:18px 15px 12px;position:relative}.car-card h3{font-size:14px;margin-bottom:5px}.class{font-size:9px;color:rgba(255,255,255,.72);margin-bottom:8px}.tags{display:flex;gap:5px}.tags span{font-size:8px;border-radius:99px;background:rgba(255,255,255,.13);padding:4px 8px;color:rgba(255,255,255,.82)}.car-card img{display:block;width:88%;height:105px;object-fit:contain;margin:13px auto 0;filter:drop-shadow(0 18px 13px rgba(0,0,0,.45))}.price{font-size:23px;font-weight:900;line-height:1;margin-top:5px}.price small{font-size:10px;display:block;font-weight:500;color:rgba(255,255,255,.65);margin-top:5px}.more{width:100%;height:36px;border:0;border-radius:5px;background:#1537b9;color:#fff;font:700 12px 'Inter Tight';margin-top:11px}.blog{padding:56px 0}.blog .title{margin-bottom:35px}.blog-card{height:222px;border-radius:7px;overflow:hidden;position:relative;color:#fff;background:#111}.blog-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.blog-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.88))}.blog-content{position:absolute;z-index:1;inset:auto 15px 15px}.meta{position:absolute;z-index:2;top:15px;left:15px;font-size:10px;font-weight:700}.blog-card h3{font-size:20px;line-height:1.05;margin-bottom:10px}.blog-card p{font-size:9px;color:rgba(255,255,255,.7);line-height:1.45}.blog-card .more{height:31px;margin-top:13px}.footer{background:#060b20;color:#fff;padding:57px 0 0;overflow:hidden}.footer-grid{display:grid;grid-template-columns:1.6fr .65fr .65fr .65fr;gap:55px}.footer-logo{font-weight:900;font-style:italic;font-size:26px;margin-bottom:23px}.footer p{font-size:10px;line-height:1.55;color:rgba(255,255,255,.43);max-width:340px}.footer h4{font-size:13px;margin-bottom:18px}.footer a{display:block;font-size:10px;color:rgba(255,255,255,.55);margin-bottom:13px}.social{display:flex;gap:10px;margin-top:18px;color:rgba(255,255,255,.55);font-size:11px}.wm{margin-top:48px;height:138px;position:relative}.wm img{position:absolute;left:80px;bottom:-36px;width:min(900px,85vw);opacity:.95}
+@media(max-width:900px){.navlinks{display:none}.hero{min-height:650px}.booking-grid{grid-template-columns:1fr 1fr;gap:10px}.return-location{display:none}.input,.input.round-left,.input.round-right{border-radius:8px}.badge{display:none}.hero-car{width:90vw}.features{width:100%}.why-car{opacity:.25;right:-160px}.grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.container{width:calc(100% - 32px)}.booking-grid,.grid{grid-template-columns:1fr}.hero{min-height:auto;padding-bottom:260px}.hero-car{bottom:0}.fleet,.blog{padding:40px 0}.footer-grid{grid-template-columns:1fr}}
+
+
+/* Subtle motion polish */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .nav{animation:navDrop .55s cubic-bezier(.22,.8,.2,1) both}
+  .booking{animation:softDrop .72s .08s cubic-bezier(.22,.8,.2,1) both}
+  .hero-car{animation:heroRise .9s .18s cubic-bezier(.22,.8,.2,1) both, gentleFloat 5.8s 1.2s ease-in-out infinite}
+  .badge.left{animation:badgeInLeft .72s .35s cubic-bezier(.22,.8,.2,1) both}
+  .badge.right{animation:badgeInRight .72s .42s cubic-bezier(.22,.8,.2,1) both}
+  .tab,.reserve,.more,.pill,.toggle,.input{transition:transform .22s ease,box-shadow .22s ease,background .22s ease,border-color .22s ease,opacity .22s ease}
+  .tab:hover,.reserve:hover,.more:hover,.pill:hover,.toggle:hover,.input:hover{transform:translateY(-1px)}
+  .reserve:hover,.more:hover{box-shadow:0 10px 24px rgba(17,50,169,.28)}
+  .pill:hover,.toggle:hover,.input:hover{box-shadow:0 8px 20px rgba(16,45,155,.10);border-color:rgba(16,45,155,.35)}
+  .feature,.car-card,.blog-card,.footer-grid>div,.title,.filters,.why-car{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.8,.2,1),transform .7s cubic-bezier(.22,.8,.2,1)}
+  .feature.is-visible,.car-card.is-visible,.blog-card.is-visible,.footer-grid>div.is-visible,.title.is-visible,.filters.is-visible,.why-car.is-visible{opacity:1;transform:translateY(0)}
+  .feature:nth-child(2),.car-card:nth-child(2),.blog-card:nth-child(2){transition-delay:.06s}
+  .feature:nth-child(3),.car-card:nth-child(3),.blog-card:nth-child(3){transition-delay:.12s}
+  .car-card:nth-child(4),.blog-card:nth-child(4){transition-delay:.04s}
+  .car-card:nth-child(5),.blog-card:nth-child(5){transition-delay:.10s}
+  .car-card:nth-child(6),.blog-card:nth-child(6){transition-delay:.16s}
+  .car-card,.blog-card{transition-property:opacity,transform,box-shadow;transition-duration:.7s,.7s,.24s}
+  .car-card:hover,.blog-card:hover,.feature:hover{transform:translateY(-5px)}
+  .car-card:hover{box-shadow:0 18px 35px rgba(4,10,35,.22)}
+  .blog-card:hover{box-shadow:0 18px 38px rgba(0,0,0,.24)}
+  .car-card img,.blog-card img{transition:transform .55s ease,filter .55s ease,opacity .55s ease}
+  .car-card:hover img{transform:scale(1.045) translateY(-2px)}
+  .blog-card:hover img{transform:scale(1.055)}
+  .switch:after{transition:transform .25s cubic-bezier(.22,.8,.2,1)}
+  .toggle:hover .switch:after{transform:translateX(-2px)}
+}
+@keyframes navDrop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+@keyframes softDrop{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+@keyframes heroRise{from{opacity:0;transform:translateX(-50%) translateY(28px) scale(.985)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+@keyframes gentleFloat{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-8px)}}
+@keyframes badgeInLeft{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:none}}
+@keyframes badgeInRight{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="container">
+    <nav class="nav"><div class="logo">UniRent</div><div class="navlinks"><a>Home</a><a>Uslovi Najma</a><a>Vozni Park</a><a>Rezervacija Vozila</a><a>Cenovnik</a><a>Novosti</a><a>Blog</a><a>Kontakt</a></div></nav>
+    <div class="booking">
+      <div class="tabs"><button class="tab active">Cars</button><button class="tab">Mini-vans</button></div>
+      <div class="booking-grid">
+        <div><span class="field-label">Pickup & Return</span><div class="input round-left"><svg viewBox="0 0 24 24"><path d="M3 13h18l-2-5H5l-2 5Zm2 0v6m14-6v6M7 19h0m10 0h0" stroke="#111" fill="none" stroke-width="2" stroke-linecap="round"/></svg>Belgrade Airport</div></div>
+        <div class="return-location">+ Different return location</div>
+        <div><span class="field-label">Pickup Date</span><div class="input"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="#111" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="#111" stroke-width="2"/></svg>Jan 19</div></div>
+        <div><span class="field-label">&nbsp;</span><div class="input">12:00 PM</div></div>
+        <div><span class="field-label">Return Date</span><div class="input"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="#111" stroke-width="2"/><path d="M8 3v4M16 3v4M4 10h16" stroke="#111" stroke-width="2"/></svg>Jan 23</div></div>
+        <div><span class="field-label">&nbsp;</span><div class="input round-right">12:00 PM</div></div>
+      </div>
+      <div class="corp">Apply corporate rate</div><button class="reserve">Rezervišite →</button>
+    </div>
+  </div>
+  <div class="badge left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c6-1 6-7 12-7 2 0 4 1 4 1s-1 6-7 6H4Zm0 0v8h10"/></svg><h3>Podrska na putu 24/7</h3><p>Vasa sigurnost je nas prioritet</p></div>
+  <div class="badge right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7c-3 0-5 2-5 5s2 5 5 5c4 0 6-10 10-10 3 0 5 2 5 5s-2 5-5 5c-4 0-6-10-10-10Z"/></svg><h3>All Inclusive Ponuda</h3><p>Uzivajte u svom vozilu bez ikakvih ogranicenja</p></div>
+  <img class="hero-car" src="unirent_assets/hero_car.png" alt="UniRent car">
+</section>
+
+<section class="why"><div class="container"><div class="title"><h2>Zasto nas ljudi prepoznaju kao idealan izbor?</h2><p>Unirent je kompanija koja nema skrivenih troskova prilikom iznajmljivanja vozila!</p></div><div class="why-wrap"><div class="features"><div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3v18M5 7h14M7 17h10"/></svg><h3>Full Kasko Osiguranje</h3><p>Bez skrivenih troskova jer je u cenu ukljuceno potpuno kasko osiguranje na sva vozila.</p></div><div class="feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 16h16M7 16V8h10v8M9 8V5h6v3"/></svg><h3>Preko 70 tipova vozila u ponudi!</h3><p>Kako bi nasim klijentima pruzili maksimalno profesionalnu uslugu obezbedili smo preko 70 novih tipova vozila.</p></div><div class="feature wide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l4 2"/></svg><h3>Neogranicena kilometraza za najmove na 3 i vise dana</h3><ul><li>Za najmove na 1 dan je OGRANICENA kilometraza do 100km.</li><li>Za najmove na 2 dana je OGRANICENA kilometraza do 400km.</li><li>Za najmove na 3 i vise dana je NEOGRANICENA kilometraza.</li></ul></div></div><img class="why-car" src="unirent_assets/why_car.png" alt="VW car"></div></div></section>
+
+<section class="fleet"><div class="container"><div class="title"><h2>Vozila izdvojena iz ponude</h2><p>Unirent je kompanija koja nema skrivenih troskova prilikom iznajmljivanja vozila!</p></div><div class="filters"><div><span class="pill">Klasa: A⌄</span><span class="pill">Benzin⌄</span></div><div class="toggle">Automatik <span class="switch"></span></div></div><div class="grid">
+<script>
+const cars=['Hyundai Santa Fe 4x4','VW Taigo Automatic TSI','Skoda Superb 4x4','Volvo XC 90 4x4','Toyota RAV4 4x4','Hyundai Tucson 4x4'];document.write(cars.map((c,i)=>`<article class="car-card"><h3>${c}</h3><div class="class">Klasa automobile ${i+2}</div><div class="tags"><span>${i===1||i===4?'Benzin':'Dizel'}</span><span>Automatik</span><span>5 Vrata</span></div><img src="unirent_assets/card${i+1}.png" alt="${c}"><div class="price">od $41<small>Cena do 31 Mar</small></div><button class="more">Opsirnije →</button></article>`).join(''));
+</script>
+</div></div></section>
+
+<section class="blog"><div class="container"><div class="title"><h2>Blog</h2><p>Rent a car Beograd UniRent</p></div><div class="grid">
+<script>
+const posts=['Figma ipsum layout undo device component.','Figma ipsum figma team list connection.','Figma ipsum content draft group figma.','Figma ipsum export union effect link.','Figma ipsum italic draft italic frame.','Figma ipsum polygon fill underline underline.'];document.write(posts.map((p,i)=>`<article class="blog-card"><img src="unirent_assets/blog${i+1}.png" alt=""><div class="meta">14 Nov 2025<br>◉ 417 &nbsp;▢ ${i%3+2}</div><div class="blog-content"><h3>${p}</h3><p>Figma ipsum component variant main layer. Device connection layout editor subtract style underline pixel.</p><button class="more">Vise →</button></div></article>`).join(''));
+</script>
+</div></div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo">UniRent</div><p>Unirent je rentacar alternativ investicija fond registrovan u Republici Srbiji kao vodeća platforma za vozila za iznajmljivanje vozila.</p><div class="social">f&nbsp;&nbsp;in</div></div><div><h4>O nama</h4><a>Kontakt</a><a>Blog</a><a>Vozni park</a><a>Uslovi najma</a></div><div><h4>Uslovi najma</h4><a>Cenovnik</a><a>Rezervacija</a></div><div><h4>Kontakt</h4><a>Beograd</a><a>Airport pickup</a></div></div><div class="wm"><img src="unirent_assets/footer_logo.png" alt="UniRent"></div></div></footer>
+
+<script>
+(function(){
+  const revealSelector = '.feature,.car-card,.blog-card,.footer-grid>div,.title,.filters,.why-car';
+  const revealItems = () => document.querySelectorAll(revealSelector).forEach(el => observer.observe(el));
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', revealItems);
+  }else{
+    revealItems();
+  }
+})();
+</script>
+
+</body>
+</html>
