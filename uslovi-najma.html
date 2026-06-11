@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UniRent — Uslovi Najma</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+:root{--blue:#1733a6;--deep:#030817;--text:#10131d;--muted:#85838a;--line:#d4d7df}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter Tight',Arial,sans-serif;background:#fff;color:var(--text);overflow-x:hidden}a{text-decoration:none;color:inherit}.container{width:min(100% - 64px,1180px);margin-inline:auto}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}.reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.8,.2,1)}.reveal.in{opacity:1;transform:none}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between;color:#fff}.logo{font-size:28px;font-weight:900;font-style:italic;letter-spacing:-1px}.navlinks{display:flex;gap:34px;font-size:12px;color:rgba(255,255,255,.82)}.navlinks a.active{font-weight:900;color:#fff}.hamb{display:none;color:#fff;font-size:28px;background:transparent;border:0}
+.hero-sub{background:linear-gradient(180deg,#1835a8 0%,#06164b 70%,#030714 100%);min-height:500px;position:relative;overflow:hidden}.hero-sub:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 62% 36%,rgba(100,130,255,.30),transparent 34%),radial-gradient(circle at 0 0,rgba(255,255,255,.08),transparent 26%);pointer-events:none}.hero-inner{position:relative;height:430px;display:flex;align-items:center}.hero-copy{position:relative;z-index:3;width:45%;color:#fff}.hero-copy h1{font-size:54px;line-height:.95;letter-spacing:-2px;font-weight:900;text-transform:uppercase;margin-bottom:22px}.hero-copy p{font-size:27px;color:rgba(255,255,255,.78);font-weight:500}.hero-car{position:absolute;right:4%;bottom:16px;width:min(650px,54vw);height:300px;z-index:2;animation:float 7s ease-in-out infinite;filter:drop-shadow(0 36px 26px rgba(0,0,0,.34))}.image-slot{position:relative;display:flex;align-items:center;justify-content:center;overflow:visible}.image-slot img{width:100%;height:100%;object-fit:contain;position:relative;z-index:2}.image-slot img.is-missing{display:none}.placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;border:2px dashed rgba(255,255,255,.38);background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.05));color:rgba(255,255,255,.78);font-weight:900;letter-spacing:.05em;text-transform:uppercase;border-radius:24px}.placeholder:before{content:"";position:absolute;left:10%;right:10%;top:25%;height:32%;border-radius:80px 80px 18px 18px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18)}.placeholder:after{content:"";position:absolute;left:15%;right:15%;bottom:15%;height:50px;border-radius:999px;background:rgba(0,0,0,.18);box-shadow:90px 38px 0 5px rgba(0,0,0,.28),-90px 38px 0 5px rgba(0,0,0,.28)}.placeholder span{position:relative;z-index:2;padding:0 20px}
+.content{padding:58px 0 66px}.terms{max-width:1120px}.terms section{margin-bottom:42px}.terms h2{font-size:30px;line-height:1.05;letter-spacing:-.8px;text-transform:uppercase;font-weight:900;margin-bottom:22px}.terms h3{font-size:16px;line-height:1.2;font-weight:900;text-transform:uppercase;margin:20px 0 10px}.terms p,.terms li{font-size:15px;line-height:1.34;color:#86868b;font-weight:600}.terms ul{padding-left:22px;margin:8px 0}.footer{background:#070b1c;color:#fff;padding:58px 0 0;overflow:hidden}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:180px}.footer h3{font-size:26px;font-style:italic;margin-bottom:20px}.footer p{max-width:420px;color:rgba(255,255,255,.48);line-height:1.45}.social{display:flex;gap:12px;margin-top:18px}.social span{font-size:14px;color:rgba(255,255,255,.65)}.foot-links{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;font-size:14px}.foot-links a{display:block;color:rgba(255,255,255,.75);margin-bottom:14px}.foot-links a.strong{font-weight:900;color:#fff;font-size:17px}.watermark{margin-top:50px;font-size:min(132px,18vw);font-weight:900;font-style:italic;color:rgba(255,255,255,.08);letter-spacing:-6px;line-height:.8;user-select:none}.copyright{font-size:11px;color:rgba(255,255,255,.35);padding:18px 0}
+@media(max-width:920px){.container{width:min(100% - 36px,1180px)}.navlinks{display:none}.hamb{display:block}.hero-sub{min-height:590px}.hero-inner{height:520px;align-items:flex-start;padding-top:60px}.hero-copy{width:100%}.hero-copy h1{font-size:42px}.hero-copy p{font-size:22px}.hero-car{right:50%;translate:50% 0;bottom:30px;width:92vw;height:250px}.footer-grid{grid-template-columns:1fr;gap:40px}.terms h2{font-size:25px}.terms p,.terms li{font-size:14px}}
+@media(max-width:560px){.container{width:min(100% - 28px,1180px)}.logo{font-size:24px}.hero-copy h1{font-size:34px}.hero-copy p{font-size:19px}.hero-car{height:220px}.content{padding:42px 0}.terms section{margin-bottom:34px}.watermark{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+<header class="hero-sub">
+  <div class="container">
+    <nav class="nav">
+      <a class="logo" href="index.html">UniRent</a>
+      <div class="navlinks">
+        <a href="index.html">Home</a><a class="active" href="uslovi-najma.html">Uslovi Najma</a><a href="#">Vozni Park</a><a href="#">Rezervacija Vozila</a><a href="cenovnik.html">Cenovnik</a><a href="#">Novosti</a><a href="#">Blog</a><a href="#">Kontakt</a>
+      </div>
+      <button class="hamb" aria-label="Menu">☰</button>
+    </nav>
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <h1>Uslovi Najma</h1>
+        <p>Osnovni Uslovi za Najam Vozila</p>
+      </div>
+      <div class="image-slot hero-car">
+        <img src="assets/uslovi-hero-car.png" alt="UniRent vozilo" data-fallback>
+        <div class="placeholder"><span>Place assets/uslovi-hero-car.png here</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="content">
+  <div class="container terms">
+    <section class="reveal">
+      <h2>Osnovni uslovi za najma vozila</h2>
+      <ul>
+        <li>Vozač mora imati minimum 21 godinu</li>
+        <li>Minimum 2 godine posedovanja vozačke dozvole i obavezno na uvid</li>
+        <li>Obavezna identifikacija - lična karta ili pasoš na uvid</li>
+        <li>Obavezna kreditna kartica kao sredstvo depozita plaćanja ili gotovinski depozit od 300 do 1800 EUR u zavisnosti od klase vozila</li>
+      </ul>
+    </section>
+    <section class="reveal">
+      <h3>Dužina najma</h3>
+      <ul>
+        <li>Minimalna dužina najma je 1 dan (24 časa)</li>
+        <li>Vreme preuzimanja i vraćanja vozila mora biti identično. Tolerišemo samo 60 minuta zakašnjenja kod vraćanja vozila. Po isteku prekoračenja, zaračunavamo novi, dodatni dan najma</li>
+      </ul>
+    </section>
+    <section class="reveal">
+      <h3>Plaćanje i depozit</h3>
+      <ul>
+        <li>Najam se plaća prilikom preuzimanja vozila i to kreditnom karticom (Amex, Visa, Mastercard), gotovinom ili uplatom na račun (pravna lica)</li>
+        <li>Depozit za vreme trajanja najma je obavezan. Depozit se polaže putem kreditne kartice ili gotovine</li>
+        <li>Depozit se određuje na osnovu klase vozila</li>
+      </ul>
+    </section>
+    <section class="reveal">
+      <h3>Preuzimanje i vraćanje vozila</h3>
+      <ul>
+        <li>Vozilo se može preuzeti i vratiti u našoj poslovnici na aerodromu Nikola Tesla, a moguća je i dostava odnosno vraćanje vozila izvan poslovnice (hotel, kućna adresa, preduzeće i sl.) uz doplatu.</li>
+        <li>Vozilo se može preuzeti i vratiti i izvan radnog vremena, uz doplatu</li>
+        <li>Prilikom preuzimanja i vraćanja vozila, obavezno je potpisivanje obrasca o stanju vozila</li>
+        <li>Savetujemo da sa našim službenikom dobro pregledate vozilo</li>
+        <li>Izdavanje i vraćanje vozila van radnog vremena dodatno se naplaćuje</li>
+      </ul>
+    </section>
+    <section class="reveal">
+      <h2>Osiguranje</h2>
+      <h3>CDW (Collision Damage Waiver) - osiguranje od štete</h3>
+      <h3>TP (Theft Protection) - Osiguranje od krađe</h3>
+      <p>Ovo osiguranje ne pokriva štete nastale u unutrašnjosti vozila, oštećenje guma i točkova, oštećenja donjeg trapa, slomljen i/ili izgubljen ključ, štete nastale tankanjem pogrešne vrste goriva i štete nanete svesno ili nepažnjom. Sva nabrojana oštećenja biće naplaćena u punom iznosu u momentu kada se vozilo vrati. Kada se vozilo vraća, stanje vozila će proveriti klijent i naš službenik zajedno i uporediti ga sa stanjem vozila prilikom preuzimanja. Svaku promenu stanja vozila tj. sva nova oštećenja će biti upisana u obrazac ugovora o najmu i potpisana obostrano.</p>
+      <p style="margin-top:16px">Ovo osiguranje ne važi u slučaju da je prilikom krađe vozilo bilo otključano ili je ključ bio ostavljen u bravi volana.<br>U slučaju krađe ključ i dokumenta moraju biti kod klijenta.</p>
+      <h3>PAI (Personal Accident Insurance) - Osiguranje lica</h3>
+      <p>Kupovinom ovog osiguranja, vozač i lica u vozilu se osiguravaju za slučaj smrti ili povreda, nastalih u saobraćajnoj nezgodi, za vreme trajanja najma vozila. Policijski zapisnik je obavezan za sve vrste osiguranja.<br>Bez policijskog zapisnika, pun iznos štete i/ili krađe biće naplaćen od klijenta, bez obzira na vrstu kupljenog osiguranja.</p>
+    </section>
+    <section class="reveal">
+      <h2>Postupci u slučaju nesreće, štete i krađe vozila:</h2>
+      <h3>Klijent je obavezan da postupi na sledeći način:</h3>
+      <ul>
+        <li>Odmah da obavesti policiju i UniRent Rent a Car o događaju i da postupi po njihovim instrukcijama.</li>
+        <li>Da zapiše podatke o drugim učesnicima u nesreći tj. događaju.</li>
+        <li>Da ispuni izveštaj o nesreći/šteti prilikom vraćanja vozila.</li>
+        <li>Da napiše kratku izjavu u kojoj će opisati uzroke i okolnosti u kojima se desila nesreća/šteta.</li>
+      </ul>
+    </section>
+    <section class="reveal">
+      <h2>Ograničenja vezana za upravljanje vozilom</h2>
+      <ul>
+        <li>Zabranjeno je da se vozilom upravlja pod uticajem alkohola, lekova i droga. U ovim slučajevima, osiguranje ne važi - klijentu se naplaćuje pun iznos štete/krađe.</li>
+        <li>Iznajmljenim vozilom može upravljati samo lice koje je upisano kao vozač u ugovoru o najmu vozila. Dozvoljava se mogućnost da se u ugovor upiše i 1 dodatni vozač, uz odobrenje UniRent Rent a Car-a, prilikom preuzimanja vozila.</li>
+        <li>Zabranjeno je iznajmljeno vozilo davati na korišćenje neovlašćenim licima tj. licima koja nisu upisana u ugovor o najmu. U ovim slučajevima osiguranje ne važi - klijentu se naplaćuje pun iznos štete/krađe.</li>
+        <li>Za najmove na 1 dan je OGRANIČENA kilometraža do 100km.<br>Za najmove na 2 dana je OGRANIČENA kilometraža do 400km.<br>Za najmove na 3 i više dana je NEOGRANIČENA kilometraža.</li>
+        <li>Naši zaposleni su tu da Vam pomognu i nađu najbolju i najisplativiju opciju za Vas.</li>
+      </ul>
+    </section>
+    <section class="reveal">
+      <h2>Ostalo</h2>
+      <p>Prilikom rezervacije vozila, rezervišete jednu od grupa vozila iz naše flote a u sklopu svake grupe imamo više različitih vozila. Prioritet UniRent Rent a Car-a je da svojim klijentima obezbedi vozilo iz naše flote koje klijenti rezervišu.<br>UniRent Rent a Car zadržava pravo u slučaju da željeno vozilo nije slobodno da vam obezbedi vozilo iz iste grupe.</p>
+    </section>
+  </div>
+</main>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>UniRent je zatvoreni alternativni investicioni fond registrovan u Republici Srbiji koji upravlja društvo za upravljanje alternativnim investicionim fondovima Capital Partners a.d. Više informacija se možete pronaći ovde.</p><div class="social"><span>f</span><span>in</span></div></div><div class="foot-links"><div><a class="strong">O nama</a><a class="strong">Uslovi najma</a><a class="strong">Cenovnik</a><a class="strong">Rezervacija</a></div><div><a>Kontakt</a><a>Blog</a><a>Vozni park</a><a>Unirent klub</a></div></div></div><div class="watermark">UniRent</div><div class="copyright">© 2025 UniRent, Inc. All rights reserved.</div></div></footer>
+<script>
+function setupImageFallbacks(){document.querySelectorAll('img[data-fallback]').forEach(img=>{const miss=()=>img.classList.add('is-missing');const ok=()=>img.classList.remove('is-missing');img.addEventListener('error',miss);img.addEventListener('load',ok);if(img.complete&&img.naturalWidth===0)miss();});}
+setupImageFallbacks();
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>
