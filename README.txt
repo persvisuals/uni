@@ -1,0 +1,1 @@
+UniRent linked static site. Open index.html. Pages: index.html, uslovi-najma.html, vozni-park.html, rezervacija-vozila.html, cenovnik.html. Put images in the assets folder using the placeholder filenames shown on the pages.
