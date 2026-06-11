@@ -137,155 +137,130 @@
 
 
 
-/* --- IMAGE FIX: hide placeholders once real assets load + correct sizing --- */
-.image-slot.has-image > .placeholder{display:none !important;}
-.image-slot img:not(.is-missing){display:block;}
-.hero-image{width:min(900px,78vw) !important;height:330px !important;}
-.hero-image img{width:100%;height:100%;object-fit:contain;object-position:center bottom;}
-.feature-image{width:min(620px,46vw) !important;height:340px !important;right:-10px !important;bottom:-8px !important;}
-.feature-image img{width:100%;height:100%;object-fit:contain;object-position:center bottom;}
-.fleet-image{width:100% !important;max-width:340px !important;height:165px !important;}
-.fleet-image img{width:100%;height:100%;object-fit:contain;object-position:center center;}
-.car-pic{height:175px !important;flex:0 0 175px !important;margin:20px 0 20px !important;}
-.blog-image.has-image > img{object-fit:cover;}
-@media(max-width:1000px){
-  .hero-image{width:92vw !important;height:285px !important;}
-  .feature-image{width:100% !important;height:300px !important;right:auto !important;bottom:auto !important;}
+/* --- VISUAL POLISH: softer cards, bigger vehicles, refined typography, root blog assets --- */
+.hero-badge{
+  width:330px !important;
+  min-height:160px !important;
+  border-radius:22px !important;
+  padding:34px 34px 30px !important;
+  background:rgba(52,78,170,.64) !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 22px 46px rgba(0,0,0,.18) !important;
+  backdrop-filter:blur(16px) saturate(135%) !important;
+  -webkit-backdrop-filter:blur(16px) saturate(135%) !important;
+  z-index:2 !important;
 }
-@media(max-width:640px){
-  .hero-image{width:94vw !important;height:245px !important;}
-  .fleet-image{height:145px !important;}
-  .car-pic{height:155px !important;flex-basis:155px !important;}
+.hero-badge.left{left:2.5% !important;}
+.hero-badge.right{right:2.5% !important;}
+.hero-badge .icon{
+  font-size:34px !important;
+  margin-bottom:22px !important;
+  opacity:.96 !important;
+}
+.hero-badge h3{
+  font-size:30px !important;
+  line-height:1.02 !important;
+  font-weight:800 !important;
+  letter-spacing:-.7px !important;
+  margin-bottom:14px !important;
+}
+.hero-badge p{
+  font-size:17px !important;
+  line-height:1.25 !important;
+  font-weight:500 !important;
+  color:rgba(255,255,255,.84) !important;
+}
+.hero-image{z-index:6 !important;}
+.hero-image img{z-index:6 !important;}
+
+.info-card{
+  border-radius:18px !important;
+  padding:38px 34px !important;
+}
+.info-card h3{
+  font-weight:800 !important;
+  letter-spacing:-.5px !important;
+}
+.info-card p,.info-card li{
+  font-weight:500 !important;
 }
 
-
-/* --- VISUAL POLISH REQUEST: hero overlap, feature edge car, larger card cars --- */
-.hero-stage{position:relative;overflow:visible !important;}
-.hero-badge{z-index:2 !important;}
-.hero-image{
-  z-index:6 !important;
-  width:min(980px,82vw) !important;
-  height:390px !important;
-  bottom:-28px !important;
-  left:50% !important;
-  translate:-50% 0 !important;
-  pointer-events:none;
-}
-.hero-image img{
-  width:100% !important;
-  height:100% !important;
-  object-fit:contain !important;
-  object-position:center bottom !important;
-}
-
-/* keep the car visible over the side cards */
-.hero-badge.left{left:3.8% !important;}
-.hero-badge.right{right:3.8% !important;}
-
-.why-wrap{
-  min-height:480px !important;
-  overflow:visible !important;
-}
-.why-grid{
-  width:62% !important;
-  z-index:3 !important;
-}
-.feature-image{
-  position:absolute !important;
-  right:-115px !important;
-  bottom:-24px !important;
-  width:min(760px,56vw) !important;
-  height:445px !important;
-  max-width:none !important;
-  z-index:4 !important;
-  pointer-events:none;
-}
-.feature-image img{
-  width:100% !important;
-  height:100% !important;
-  object-fit:contain !important;
-  object-position:right bottom !important;
-}
-
-/* larger, premium vehicle images inside cards */
 .car-card{
+  border-radius:22px !important;
   min-height:500px !important;
-  overflow:visible !important;
+  padding:24px 24px 22px !important;
+  overflow:hidden !important;
+  box-shadow:0 18px 42px rgba(0,0,0,.18) !important;
+}
+.car-card h3{
+  font-size:20px !important;
+  line-height:1.12 !important;
+  font-weight:750 !important;
+  letter-spacing:-.35px !important;
+}
+.car-card small{
+  font-size:16px !important;
+  font-weight:500 !important;
+  color:rgba(255,255,255,.70) !important;
+}
+.tags{
+  gap:10px !important;
+  margin-top:18px !important;
+}
+.tag{
+  font-size:14px !important;
+  font-weight:500 !important;
+  padding:9px 15px !important;
+  background:rgba(255,255,255,.18) !important;
 }
 .car-pic{
-  height:245px !important;
-  flex:0 0 245px !important;
-  margin:20px 0 24px !important;
+  height:250px !important;
+  flex:0 0 250px !important;
+  margin:8px 0 22px !important;
   align-items:flex-end !important;
-  overflow:visible !important;
 }
 .fleet-image{
   width:118% !important;
   max-width:none !important;
-  height:245px !important;
-  margin-left:-9% !important;
-  margin-right:-9% !important;
+  height:250px !important;
 }
 .fleet-image img{
   width:100% !important;
   height:100% !important;
   object-fit:contain !important;
   object-position:center bottom !important;
-  filter:drop-shadow(0 28px 30px rgba(0,0,0,.38)) !important;
+  filter:drop-shadow(0 28px 32px rgba(0,0,0,.36)) !important;
 }
-.image-slot.has-image > .placeholder{display:none !important;}
+.price{
+  font-size:38px !important;
+  font-weight:800 !important;
+  letter-spacing:-.9px !important;
+}
+.more{
+  height:56px !important;
+  border-radius:13px !important;
+  font-size:20px !important;
+  font-weight:600 !important;
+  margin-top:20px !important;
+}
+
+.blog-image img{object-fit:cover !important;object-position:center !important;}
 
 @media(max-width:1000px){
-  .hero-image{
-    width:94vw !important;
-    height:330px !important;
-    bottom:-18px !important;
-  }
-  .why-grid{
-    width:100% !important;
-  }
-  .feature-image{
-    position:relative !important;
-    right:auto !important;
-    bottom:auto !important;
-    width:100% !important;
-    height:350px !important;
-    margin-top:24px !important;
-  }
-  .car-card{
-    min-height:470px !important;
-  }
-  .car-pic{
-    height:220px !important;
-    flex-basis:220px !important;
-  }
-  .fleet-image{
-    height:220px !important;
-  }
+  .hero-badge{display:none !important;}
+  .car-card{min-height:470px !important;}
+  .car-pic{height:220px !important;flex-basis:220px !important;}
+  .fleet-image{height:220px !important;width:112% !important;}
 }
 @media(max-width:640px){
-  .hero-stage{height:360px !important;}
-  .hero-image{
-    width:96vw !important;
-    height:275px !important;
-    bottom:-8px !important;
-  }
-  .feature-image{
-    height:290px !important;
-  }
-  .car-card{
-    min-height:430px !important;
-  }
-  .car-pic{
-    height:190px !important;
-    flex-basis:190px !important;
-  }
-  .fleet-image{
-    width:108% !important;
-    height:190px !important;
-    margin-left:-4% !important;
-    margin-right:-4% !important;
-  }
+  .car-card{min-height:430px !important;border-radius:18px !important;padding:20px !important;}
+  .car-card h3{font-size:18px !important;}
+  .car-card small{font-size:14px !important;}
+  .tag{font-size:12px !important;padding:7px 12px !important;}
+  .car-pic{height:190px !important;flex-basis:190px !important;margin:4px 0 16px !important;}
+  .fleet-image{height:190px !important;width:112% !important;}
+  .price{font-size:32px !important;}
+  .more{height:48px !important;font-size:17px !important;}
 }
 
 </style></head>
@@ -298,42 +273,27 @@
 <section class="section"><div class="container"><div class="title reveal"><h2>Zasto nas ljudi prepoznaju kao idealan izbor?</h2><p>Unirent je kompanija koja nema skrivenih troskova prilikom iznajmljivanja vozila!</p></div><div class="why-wrap"><div class="why-grid"><div class="info-card reveal"><div class="mini-icon">＋</div><h3>Full Kasko Osiguranje</h3><p>Bez skrivenih troskova jer je u cenu ukljuceno potpuno kasko osiguranje na sva vozila.</p></div><div class="info-card reveal"><div class="mini-icon">▤</div><h3>Preko 70 tipova vozila u ponudi!</h3><p>Kako bi nasim klijentima pruzili maksimalno profesionalnu uslugu obezbedili smo preko 70 tipova vozila.</p></div><div class="info-card wide reveal"><div class="mini-icon">◷</div><h3>Neogranicena kilometraza za najmove na 3 i vise dana</h3><ul><li>Za najmove na 1 dan je OGRANICENA kilometraza do 100km.</li><li>Za najmove na 2 dana je OGRANICENA kilometraza do 400km.</li><li>Za najmove na 3 i vise dana je NEOGRANICENA kilometraza.</li></ul></div></div><div class="image-slot feature-image"><img src="assets/feature-car.png" alt="Feature car" data-fallback><div class="placeholder why-placeholder"><span>Place assets/feature-car.png here</span></div></div></div></div></section>
 <section class="fleet"><div class="container"><div class="title reveal"><h2>Vozila izdvojena iz ponude</h2><p>Unirent je kompanija koja nema skrivenih troskova prilikom iznajmljivanja vozila!</p></div><div class="filters reveal"><div><select id="classFilter" class="filter-select"><option value="all">Klasa: Sve</option><option value="A">Klasa: A</option><option value="B">Klasa: B</option><option value="C">Klasa: C</option><option value="SUV">Klasa: SUV</option></select><select id="fuelFilter" class="filter-select"><option value="all">Gorivo: Sve</option><option value="Benzin">Benzin</option><option value="Dizel">Dizel</option><option value="Hybrid">Hybrid</option></select></div><button class="switch" id="autoSwitch" type="button" aria-pressed="true">Automatik <span class="track"></span></button></div>
 <div class="fleet-grid" id="fleetGrid">
-<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="true"><h3>Hyundai Santa Fe 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/hyundai-santa-fe.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/hyundai-santa-fe.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="true"><h3>VW Taigo Automatic TSI</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/vw-taigo.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/vw-taigo.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="B" data-fuel="Dizel" data-auto="true"><h3>Skoda Superb 4x4</h3><small>Klasa B</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/skoda-superb.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/skoda-superb.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="false"><h3>Volvo XC 90 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/volvo-xc90.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/volvo-xc90.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="C" data-fuel="Hybrid" data-auto="true"><h3>Toyota RAV4 4x4</h3><small>Klasa C</small><div class="tags"><span class="tag">Hybrid</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/toyota-rav4.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/toyota-rav4.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="false"><h3>Hyundai Tucson 4x4</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/hyundai-tucson.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/hyundai-tucson.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="true"><h3>Hyundai Santa Fe 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/hyundai-santa-fe.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/hyundai-santa-fe.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="true"><h3>VW Taigo Automatic TSI</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/vw-taigo.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/vw-taigo.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="B" data-fuel="Dizel" data-auto="true"><h3>Skoda Superb 4x4</h3><small>Klasa B</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/skoda-superb.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/skoda-superb.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="false"><h3>Volvo XC 90 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/volvo-xc90.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/volvo-xc90.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="C" data-fuel="Hybrid" data-auto="true"><h3>Toyota RAV4 4x4</h3><small>Klasa C</small><div class="tags"><span class="tag">Hybrid</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/toyota-rav4.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/toyota-rav4.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="false"><h3>Hyundai Tucson 4x4</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/hyundai-tucson.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/hyundai-tucson.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
 <div class="empty-state" id="emptyState">Nema vozila za izabrane filtere.</div></div></div></section>
-<section class="blog"><div class="container"><div class="title reveal"><h2>Blog</h2><p>Rent a car Beograd UniRent</p></div><div class="blog-grid"><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog/blog-1.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog/blog-1.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum layout undo device component.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog/blog-2.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog/blog-2.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum figma team list connection.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog/blog-3.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog/blog-3.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum content draft group figma.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog/blog-4.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog/blog-4.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum export union effect link.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog/blog-5.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog/blog-5.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum italic draft italic frame.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog/blog-6.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog/blog-6.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum polygon fill underline underline.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article></div></div></section>
+<section class="blog"><div class="container"><div class="title reveal"><h2>Blog</h2><p>Rent a car Beograd UniRent</p></div><div class="blog-grid"><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-1.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-1.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum layout undo device component.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-2.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-2.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum figma team list connection.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-3.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-3.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum content draft group figma.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-4.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-4.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum export union effect link.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-5.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-5.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum italic draft italic frame.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-6.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-6.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum polygon fill underline underline.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article></div></div></section>
 <footer class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>UniRent je rent a car agencija koja nema skrivenih troskova prilikom iznajmljivanja vozila. Podrska na putu 24/7 i all inclusive ponuda.</p></div><div class="foot-links"><div><a href="index.html" class="strong">O nama</a><a href="uslovi-najma.html" class="strong">Uslovi najma</a><a href="cenovnik.html" class="strong">Cenovnik</a><a href="rezervacija-vozila.html" class="strong">Rezervacija</a></div><div><a>Kontakt</a><a>Blog</a><a href="vozni-park.html">Vozni park</a><a>Unirent klub</a></div></div></div><div class="watermark">UniRent</div></div></footer>
 <script>
 
 function setupImageFallbacks(){
   document.querySelectorAll('img[data-fallback]').forEach(img=>{
-    const slot = img.closest('.image-slot');
-    const markMissing = () => {
-      img.classList.add('is-missing');
-      if(slot) slot.classList.remove('has-image');
-    };
-    const markLoaded = () => {
-      if(img.naturalWidth > 0){
-        img.classList.remove('is-missing');
-        if(slot) slot.classList.add('has-image');
-      } else {
-        markMissing();
-      }
-    };
-    img.addEventListener('error', markMissing);
-    img.addEventListener('load', markLoaded);
-    if(img.complete){
-      if(img.naturalWidth > 0) markLoaded();
-      else markMissing();
-    }
+    const markMissing=()=>img.classList.add('is-missing');
+    const markLoaded=()=>img.classList.remove('is-missing');
+    img.addEventListener('error',markMissing);
+    img.addEventListener('load',markLoaded);
+    if(img.complete && img.naturalWidth===0) markMissing();
   });
 }
 setupImageFallbacks();
-window.addEventListener("load", setupImageFallbacks);
 
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.14});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active')}));
