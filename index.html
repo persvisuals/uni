@@ -58,6 +58,83 @@
 @media(max-width:1000px){.booking-form{grid-template-columns:1fr 1fr}.booking-form .pickup-group{grid-column:1/-1}.book-bottom{display:grid;grid-template-columns:1fr 1fr}.feature-image{position:relative;right:auto;width:100%;height:280px;margin-top:24px}.hero-image{width:88vw}}
 @media(max-width:640px){.booking{padding:22px 18px 24px}.tabs{margin-bottom:20px}.tab{font-size:14px;padding:10px 22px}.booking-form{grid-template-columns:1fr;gap:14px}.book-bottom{grid-template-columns:1fr;gap:14px}.return-time-wrap{width:100%}.field{height:58px;font-size:16px}.return-loc{font-size:14px}.hero-image{width:92vw;height:250px}.car-pic{height:150px;flex-basis:150px}.fleet-image{height:142px}}
 
+
+
+/* --- BOOKING ALIGNMENT POLISH --- */
+.booking{
+  padding:30px 32px 34px !important;
+}
+.booking-form{
+  display:grid !important;
+  grid-template-columns:minmax(330px,1.7fr) repeat(3,minmax(180px,1fr)) !important;
+  gap:20px 20px !important;
+  align-items:start !important;
+}
+.booking-form .pickup-group{
+  grid-column:auto !important;
+}
+.field-wrap label,.corp{
+  min-height:18px;
+  margin-bottom:12px !important;
+  line-height:1.1;
+}
+.field{
+  height:66px !important;
+  border-radius:8px !important;
+  padding:0 18px !important;
+}
+.field.input{
+  padding:0 18px !important;
+}
+.return-loc{
+  height:auto !important;
+  min-height:34px;
+  padding:12px 0 0 0 !important;
+  align-items:flex-start !important;
+}
+.book-bottom{
+  margin-top:18px !important;
+  display:grid !important;
+  grid-template-columns:minmax(330px,1.7fr) repeat(3,minmax(180px,1fr)) !important;
+  gap:20px !important;
+  align-items:start !important;
+}
+.return-time-wrap{
+  grid-column:1/2;
+  width:100%;
+}
+.reserve-wrap{
+  grid-column:2/3;
+  width:100%;
+}
+.reserve-wrap .btn{
+  width:100%;
+  max-width:240px;
+  justify-content:center;
+  height:56px;
+}
+.tabs{
+  margin-bottom:28px !important;
+}
+@media(max-width:1000px){
+  .booking-form,.book-bottom{
+    grid-template-columns:1fr 1fr !important;
+  }
+  .booking-form .pickup-group{grid-column:1/-1 !important}
+  .return-time-wrap{grid-column:1/2}
+  .reserve-wrap{grid-column:2/3}
+}
+@media(max-width:640px){
+  .booking{padding:22px 18px 26px !important}
+  .booking-form,.book-bottom{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  .return-time-wrap,.reserve-wrap{grid-column:1/-1}
+  .reserve-wrap .btn{max-width:none}
+  .return-loc{padding-top:10px !important}
+}
+
 </style></head>
 <body>
 <header class="hero"><div class="container nav"><div class="logo">UniRent</div><div class="navlinks"><a>Home</a><a>Uslovi Najma</a><a>Vozni Park</a><a>Rezervacija Vozila</a><a>Cenovnik</a><a>Novosti</a><a>Blog</a><a>Kontakt</a></div></div>
