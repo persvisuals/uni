@@ -263,6 +263,55 @@
   .more{height:48px !important;font-size:17px !important;}
 }
 
+
+/* --- FINAL IMAGE + RADIUS FIX --- */
+:root{--card-radius:22px;}
+.car-card,
+.blog-card{
+  border-radius:var(--card-radius) !important;
+  overflow:hidden !important;
+}
+.image-slot.has-image > .placeholder{
+  display:none !important;
+  opacity:0 !important;
+  visibility:hidden !important;
+}
+.image-slot:not(.has-image) > img.is-missing{
+  display:none !important;
+}
+.image-slot img{
+  position:relative;
+  z-index:2;
+}
+.hero-image.has-image,
+.feature-image.has-image,
+.fleet-image.has-image,
+.blog-image.has-image{
+  background:transparent !important;
+  border:0 !important;
+}
+.hero-image.has-image::before,
+.hero-image.has-image::after,
+.feature-image.has-image::before,
+feature-image.has-image::after,
+.fleet-image.has-image::before,
+.fleet-image.has-image::after,
+.blog-image.has-image::before,
+.blog-image.has-image::after{
+  display:none !important;
+}
+.blog-card .blog-image{
+  border-top-left-radius:var(--card-radius) !important;
+  border-top-right-radius:var(--card-radius) !important;
+  overflow:hidden !important;
+}
+.blog-card .blog-image img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+}
+
 </style></head>
 <body>
 <header class="hero"><div class="container nav"><a class="logo" href="index.html">UniRent</a><div class="navlinks"><a href="index.html" class="active">Home</a><a href="uslovi-najma.html">Uslovi Najma</a><a href="vozni-park.html">Vozni Park</a><a href="rezervacija-vozila.html">Rezervacija Vozila</a><a href="cenovnik.html">Cenovnik</a><a href="#">Novosti</a><a href="#">Blog</a><a href="#">Kontakt</a></div></div>
@@ -273,12 +322,12 @@
 <section class="section"><div class="container"><div class="title reveal"><h2>Zasto nas ljudi prepoznaju kao idealan izbor?</h2><p>Unirent je kompanija koja nema skrivenih troskova prilikom iznajmljivanja vozila!</p></div><div class="why-wrap"><div class="why-grid"><div class="info-card reveal"><div class="mini-icon">＋</div><h3>Full Kasko Osiguranje</h3><p>Bez skrivenih troskova jer je u cenu ukljuceno potpuno kasko osiguranje na sva vozila.</p></div><div class="info-card reveal"><div class="mini-icon">▤</div><h3>Preko 70 tipova vozila u ponudi!</h3><p>Kako bi nasim klijentima pruzili maksimalno profesionalnu uslugu obezbedili smo preko 70 tipova vozila.</p></div><div class="info-card wide reveal"><div class="mini-icon">◷</div><h3>Neogranicena kilometraza za najmove na 3 i vise dana</h3><ul><li>Za najmove na 1 dan je OGRANICENA kilometraza do 100km.</li><li>Za najmove na 2 dana je OGRANICENA kilometraza do 400km.</li><li>Za najmove na 3 i vise dana je NEOGRANICENA kilometraza.</li></ul></div></div><div class="image-slot feature-image"><img src="assets/feature-car.png" alt="Feature car" data-fallback><div class="placeholder why-placeholder"><span>Place assets/feature-car.png here</span></div></div></div></div></section>
 <section class="fleet"><div class="container"><div class="title reveal"><h2>Vozila izdvojena iz ponude</h2><p>Unirent je kompanija koja nema skrivenih troskova prilikom iznajmljivanja vozila!</p></div><div class="filters reveal"><div><select id="classFilter" class="filter-select"><option value="all">Klasa: Sve</option><option value="A">Klasa: A</option><option value="B">Klasa: B</option><option value="C">Klasa: C</option><option value="SUV">Klasa: SUV</option></select><select id="fuelFilter" class="filter-select"><option value="all">Gorivo: Sve</option><option value="Benzin">Benzin</option><option value="Dizel">Dizel</option><option value="Hybrid">Hybrid</option></select></div><button class="switch" id="autoSwitch" type="button" aria-pressed="true">Automatik <span class="track"></span></button></div>
 <div class="fleet-grid" id="fleetGrid">
-<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="true"><h3>Hyundai Santa Fe 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/hyundai-santa-fe.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/hyundai-santa-fe.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="true"><h3>VW Taigo Automatic TSI</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/vw-taigo.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/vw-taigo.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="B" data-fuel="Dizel" data-auto="true"><h3>Skoda Superb 4x4</h3><small>Klasa B</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/skoda-superb.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/skoda-superb.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="false"><h3>Volvo XC 90 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/volvo-xc90.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/volvo-xc90.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="C" data-fuel="Hybrid" data-auto="true"><h3>Toyota RAV4 4x4</h3><small>Klasa C</small><div class="tags"><span class="tag">Hybrid</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/toyota-rav4.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/toyota-rav4.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
-<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="false"><h3>Hyundai Tucson 4x4</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/cars/hyundai-tucson.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/cars/hyundai-tucson.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="true"><h3>Hyundai Santa Fe 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/hyundai-santa-fe.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/hyundai-santa-fe.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="true"><h3>VW Taigo Automatic TSI</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/vw-taigo.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/vw-taigo.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="B" data-fuel="Dizel" data-auto="true"><h3>Skoda Superb 4x4</h3><small>Klasa B</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/skoda-superb.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/skoda-superb.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="SUV" data-fuel="Dizel" data-auto="false"><h3>Volvo XC 90 4x4</h3><small>Klasa SUV</small><div class="tags"><span class="tag">Dizel</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/volvo-xc90.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/volvo-xc90.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="C" data-fuel="Hybrid" data-auto="true"><h3>Toyota RAV4 4x4</h3><small>Klasa C</small><div class="tags"><span class="tag">Hybrid</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/toyota-rav4.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/toyota-rav4.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
+<div class="car-card reveal" data-class="A" data-fuel="Benzin" data-auto="false"><h3>Hyundai Tucson 4x4</h3><small>Klasa A</small><div class="tags"><span class="tag">Benzin</span><span class="tag">Manuel</span><span class="tag">5 Vrata</span></div><div class="car-pic"><div class="image-slot fleet-image"><img src="assets/hyundai-tucson.png" alt="Car" data-fallback><div class="placeholder fleet-placeholder"><span>Place assets/hyundai-tucson.png</span></div></div></div><div class="price">od $41</div><small>Cena do 31 Mar</small><button class="more">Opsirnije →</button></div>
 <div class="empty-state" id="emptyState">Nema vozila za izabrane filtere.</div></div></div></section>
 <section class="blog"><div class="container"><div class="title reveal"><h2>Blog</h2><p>Rent a car Beograd UniRent</p></div><div class="blog-grid"><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-1.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-1.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum layout undo device component.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-2.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-2.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum figma team list connection.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-3.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-3.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum content draft group figma.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-4.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-4.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum export union effect link.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-5.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-5.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum italic draft italic frame.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article><article class="blog-card reveal"><div class="image-slot blog-image"><img src="assets/blog-6.jpg" alt="Blog image" data-fallback><div class="placeholder blog-placeholder"><span>Place assets/blog-6.jpg</span></div></div><div class="blog-body"><h3>Figma ipsum polygon fill underline underline.</h3><p>Figma ipsum component variant main layer. Pixel resizing list editor arrow library share.</p><button class="more">Vise →</button></div></article></div></div></section>
 <footer class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>UniRent je rent a car agencija koja nema skrivenih troskova prilikom iznajmljivanja vozila. Podrska na putu 24/7 i all inclusive ponuda.</p></div><div class="foot-links"><div><a href="index.html" class="strong">O nama</a><a href="uslovi-najma.html" class="strong">Uslovi najma</a><a href="cenovnik.html" class="strong">Cenovnik</a><a href="rezervacija-vozila.html" class="strong">Rezervacija</a></div><div><a>Kontakt</a><a>Blog</a><a href="vozni-park.html">Vozni park</a><a>Unirent klub</a></div></div></div><div class="watermark">UniRent</div></div></footer>
@@ -286,14 +335,36 @@
 
 function setupImageFallbacks(){
   document.querySelectorAll('img[data-fallback]').forEach(img=>{
-    const markMissing=()=>img.classList.add('is-missing');
-    const markLoaded=()=>img.classList.remove('is-missing');
-    img.addEventListener('error',markMissing);
-    img.addEventListener('load',markLoaded);
-    if(img.complete && img.naturalWidth===0) markMissing();
+    const slot = img.closest('.image-slot');
+    const placeholder = slot ? slot.querySelector('.placeholder') : null;
+
+    const markLoaded = () => {
+      if (img.naturalWidth > 0) {
+        img.classList.remove('is-missing');
+        if (slot) slot.classList.add('has-image');
+        if (placeholder) placeholder.style.display = 'none';
+      } else {
+        markMissing();
+      }
+    };
+
+    const markMissing = () => {
+      img.classList.add('is-missing');
+      if (slot) slot.classList.remove('has-image');
+      if (placeholder) placeholder.style.display = 'flex';
+    };
+
+    img.addEventListener('load', markLoaded);
+    img.addEventListener('error', markMissing);
+
+    if (img.complete) {
+      if (img.naturalWidth > 0) markLoaded();
+      else markMissing();
+    }
   });
 }
 setupImageFallbacks();
+window.addEventListener('load', setupImageFallbacks);
 
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.14});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active')}));
