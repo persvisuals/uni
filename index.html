@@ -158,6 +158,136 @@
   .car-pic{height:155px !important;flex-basis:155px !important;}
 }
 
+
+/* --- VISUAL POLISH REQUEST: hero overlap, feature edge car, larger card cars --- */
+.hero-stage{position:relative;overflow:visible !important;}
+.hero-badge{z-index:2 !important;}
+.hero-image{
+  z-index:6 !important;
+  width:min(980px,82vw) !important;
+  height:390px !important;
+  bottom:-28px !important;
+  left:50% !important;
+  translate:-50% 0 !important;
+  pointer-events:none;
+}
+.hero-image img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center bottom !important;
+}
+
+/* keep the car visible over the side cards */
+.hero-badge.left{left:3.8% !important;}
+.hero-badge.right{right:3.8% !important;}
+
+.why-wrap{
+  min-height:480px !important;
+  overflow:visible !important;
+}
+.why-grid{
+  width:62% !important;
+  z-index:3 !important;
+}
+.feature-image{
+  position:absolute !important;
+  right:-115px !important;
+  bottom:-24px !important;
+  width:min(760px,56vw) !important;
+  height:445px !important;
+  max-width:none !important;
+  z-index:4 !important;
+  pointer-events:none;
+}
+.feature-image img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:right bottom !important;
+}
+
+/* larger, premium vehicle images inside cards */
+.car-card{
+  min-height:500px !important;
+  overflow:visible !important;
+}
+.car-pic{
+  height:245px !important;
+  flex:0 0 245px !important;
+  margin:20px 0 24px !important;
+  align-items:flex-end !important;
+  overflow:visible !important;
+}
+.fleet-image{
+  width:118% !important;
+  max-width:none !important;
+  height:245px !important;
+  margin-left:-9% !important;
+  margin-right:-9% !important;
+}
+.fleet-image img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:contain !important;
+  object-position:center bottom !important;
+  filter:drop-shadow(0 28px 30px rgba(0,0,0,.38)) !important;
+}
+.image-slot.has-image > .placeholder{display:none !important;}
+
+@media(max-width:1000px){
+  .hero-image{
+    width:94vw !important;
+    height:330px !important;
+    bottom:-18px !important;
+  }
+  .why-grid{
+    width:100% !important;
+  }
+  .feature-image{
+    position:relative !important;
+    right:auto !important;
+    bottom:auto !important;
+    width:100% !important;
+    height:350px !important;
+    margin-top:24px !important;
+  }
+  .car-card{
+    min-height:470px !important;
+  }
+  .car-pic{
+    height:220px !important;
+    flex-basis:220px !important;
+  }
+  .fleet-image{
+    height:220px !important;
+  }
+}
+@media(max-width:640px){
+  .hero-stage{height:360px !important;}
+  .hero-image{
+    width:96vw !important;
+    height:275px !important;
+    bottom:-8px !important;
+  }
+  .feature-image{
+    height:290px !important;
+  }
+  .car-card{
+    min-height:430px !important;
+  }
+  .car-pic{
+    height:190px !important;
+    flex-basis:190px !important;
+  }
+  .fleet-image{
+    width:108% !important;
+    height:190px !important;
+    margin-left:-4% !important;
+    margin-right:-4% !important;
+  }
+}
+
 </style></head>
 <body>
 <header class="hero"><div class="container nav"><a class="logo" href="index.html">UniRent</a><div class="navlinks"><a href="index.html" class="active">Home</a><a href="uslovi-najma.html">Uslovi Najma</a><a href="vozni-park.html">Vozni Park</a><a href="rezervacija-vozila.html">Rezervacija Vozila</a><a href="cenovnik.html">Cenovnik</a><a href="#">Novosti</a><a href="#">Blog</a><a href="#">Kontakt</a></div></div>
