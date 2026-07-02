@@ -1,0 +1,3 @@
+All local CSS/JS/image references found.
+
+Note: the HTML contains valid in-page links such as index.html#blog and one JavaScript template string (${c.img}) used while rendering cards dynamically. These are not missing files.

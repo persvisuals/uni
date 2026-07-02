@@ -15,23 +15,25 @@
 @media(max-width:920px){.container{width:min(100% - 36px,1180px)}.navlinks{display:none}.hamb{display:block}.hero-sub{min-height:590px}.hero-inner{height:520px;align-items:flex-start;padding-top:60px}.hero-copy{width:100%}.hero-copy h1{font-size:42px}.hero-copy p{font-size:22px}.hero-car{right:50%;translate:50% 0;bottom:30px;width:92vw;height:250px}.footer-grid{grid-template-columns:1fr;gap:40px}.terms h2{font-size:25px}.terms p,.terms li{font-size:14px}}
 @media(max-width:560px){.container{width:min(100% - 28px,1180px)}.logo{font-size:24px}.hero-copy h1{font-size:34px}.hero-copy p{font-size:19px}.hero-car{height:220px}.content{padding:42px 0}.terms section{margin-bottom:34px}.watermark{letter-spacing:-3px}}
 </style>
+<link rel="stylesheet" href="unirent-fixes.css">
+<link rel="stylesheet" href="unirent-v2.css">
 </head>
 <body>
 <header class="hero-sub">
   <div class="container">
     <nav class="nav">
       <a class="logo" href="index.html">UniRent</a>
-      <div class="navlinks"><a href="index.html">Home</a><a href="uslovi-najma.html" class="active">Uslovi Najma</a><a href="vozni-park.html">Vozni Park</a><a href="rezervacija-vozila.html">Rezervacija Vozila</a><a href="cenovnik.html">Cenovnik</a><a href="#">Novosti</a><a href="#">Blog</a><a href="#">Kontakt</a></div>
-      <button class="hamb" aria-label="Menu">☰</button>
+      <div class="navlinks" id="primary-navigation"><a href="index.html">Početna</a><a href="uslovi-najma.html" class="active" aria-current="page">Uslovi najma</a><a href="vozni-park.html">Vozni park</a><a href="rezervacija-vozila.html">Rezervacija vozila</a><a href="cenovnik.html">Cenovnik</a><a href="index.html#blog">Blog</a><a href="#kontakt">Kontakt</a></div>
+      <button class="menu" type="button" aria-label="Otvori meni" aria-controls="primary-navigation" aria-expanded="false">Meni</button>
     </nav>
     <div class="hero-inner">
       <div class="hero-copy reveal">
-        <h1>Uslovi Najma</h1>
-        <p>Osnovni Uslovi za Najam Vozila</p>
+        <h1>Uslovi najma</h1>
+        <p>Osnovni uslovi za Najam Vozila</p>
       </div>
       <div class="image-slot hero-car">
         <img src="assets/uslovi-hero-car.png" alt="UniRent vozilo" data-fallback>
-        <div class="placeholder"><span>Place assets/uslovi-hero-car.png here</span></div>
+        <div class="placeholder"><span>Vizual u pripremi</span></div>
       </div>
     </div>
   </div>
@@ -39,7 +41,7 @@
 <main class="content">
   <div class="container terms">
     <section class="reveal">
-      <h2>Osnovni uslovi za najma vozila</h2>
+      <h2>Osnovni uslovi za najam vozila</h2>
       <ul>
         <li>Vozač mora imati minimum 21 godinu</li>
         <li>Minimum 2 godine posedovanja vozačke dozvole i obavezno na uvid</li>
@@ -97,7 +99,7 @@
         <li>Zabranjeno je da se vozilom upravlja pod uticajem alkohola, lekova i droga. U ovim slučajevima, osiguranje ne važi - klijentu se naplaćuje pun iznos štete/krađe.</li>
         <li>Iznajmljenim vozilom može upravljati samo lice koje je upisano kao vozač u ugovoru o najmu vozila. Dozvoljava se mogućnost da se u ugovor upiše i 1 dodatni vozač, uz odobrenje UniRent Rent a Car-a, prilikom preuzimanja vozila.</li>
         <li>Zabranjeno je iznajmljeno vozilo davati na korišćenje neovlašćenim licima tj. licima koja nisu upisana u ugovor o najmu. U ovim slučajevima osiguranje ne važi - klijentu se naplaćuje pun iznos štete/krađe.</li>
-        <li>Za najmove na 1 dan je OGRANIČENA kilometraža do 100km.<br>Za najmove na 2 dana je OGRANIČENA kilometraža do 400km.<br>Za najmove na 3 i više dana je NEOGRANIČENA kilometraža.</li>
+        <li>Za najmove na 1 dan je OGRANIČENA kilometraža do 100 km.<br>Za najmove na 2 dana je OGRANIČENA kilometraža do 400 km.<br>Za najmove na 3 i više dana je NEOGRANIČENA kilometraža.</li>
         <li>Naši zaposleni su tu da Vam pomognu i nađu najbolju i najisplativiju opciju za Vas.</li>
       </ul>
     </section>
@@ -107,10 +109,12 @@
     </section>
   </div>
 </main>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>UniRent je zatvoreni alternativni investicioni fond registrovan u Republici Srbiji koji upravlja društvo za upravljanje alternativnim investicionim fondovima Capital Partners a.d. Više informacija se možete pronaći ovde.</p><div class="social"><span>f</span><span>in</span></div></div><div class="foot-links"><div><a href="index.html" class="strong">O nama</a><a href="uslovi-najma.html" class="strong">Uslovi najma</a><a href="cenovnik.html" class="strong">Cenovnik</a><a href="rezervacija-vozila.html" class="strong">Rezervacija</a></div><div><a>Kontakt</a><a>Blog</a><a href="vozni-park.html">Vozni park</a><a>Unirent klub</a></div></div></div><div class="watermark">UniRent</div><div class="copyright">© 2025 UniRent, Inc. All rights reserved.</div></div></footer>
+<footer id="kontakt" class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>UniRent je rent-a-car agencija za pouzdan najam vozila u Beogradu i širom Srbije. Bez skrivenih troškova, uz 24/7 podršku na putu i jasne uslove najma.</p><div class="social"><span>f</span><span>in</span></div></div><div class="foot-links"><div><a href="index.html" class="strong">O nama</a><a href="uslovi-najma.html" class="strong">Uslovi najma</a><a href="cenovnik.html" class="strong">Cenovnik</a><a href="rezervacija-vozila.html" class="strong">Rezervacija</a></div><div><a href="#kontakt">Kontakt</a><a href="index.html#blog">Blog</a><a href="vozni-park.html">Vozni park</a></div></div></div><div class="watermark">UniRent</div><div class="copyright">© 2025 UniRent. Sva prava zadržana.</div></div></footer>
 <script>
 function setupImageFallbacks(){document.querySelectorAll('img[data-fallback]').forEach(img=>{const miss=()=>img.classList.add('is-missing');const ok=()=>img.classList.remove('is-missing');img.addEventListener('error',miss);img.addEventListener('load',ok);if(img.complete&&img.naturalWidth===0)miss();});}
 setupImageFallbacks();
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="unirent-fixes.js"></script>
+<script src="unirent-v2.js"></script>
 </body></html>

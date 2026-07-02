@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Rezervacija Vozila | UniRent</title>
+<title>Rezervacija vozila | UniRent</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--blue:#1834a8;--blue2:#233ebb;--deep:#070b1d;--muted:#80828b;--line:#dfe2eb;--text:#11131b;--bg:#ececec}
@@ -11,28 +11,30 @@
 @media(max-width:980px){.container{width:min(100% - 36px,1120px)}.navlinks{display:none}.menu{display:block}.hero{padding-top:105px;min-height:auto;padding-bottom:360px}.hero-grid{display:block}.hero-car-wrap{right:50%;transform:translateX(50%);bottom:28px;width:min(760px,92vw);height:310px}.cards{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr;gap:36px}.filters{margin-bottom:34px}}
 @media(max-width:640px){.container{width:min(100% - 28px,1120px)}.topbar,.nav{height:64px}.logo{font-size:23px}.hero{padding-top:92px;padding-bottom:275px}.hero h1{font-size:40px}.hero p{font-size:22px}.reservation-box{grid-template-columns:1fr}.hero-car-wrap{height:235px}.filters{align-items:flex-start;flex-direction:column}.cards{grid-template-columns:1fr}.car-card{min-height:382px}.selected-panel{left:14px;right:14px;bottom:14px}.watermark{letter-spacing:-3px}.fake-input input,.fake-input select{font-size:15px}}
 </style>
+<link rel="stylesheet" href="unirent-fixes.css">
+<link rel="stylesheet" href="unirent-v2.css">
 </head>
 <body>
 <header class="topbar">
   <div class="container"><nav class="nav">
     <a class="logo" href="index.html">UniRent</a>
-    <div class="navlinks"><a href="index.html">Home</a><a href="uslovi-najma.html">Uslovi Najma</a><a href="vozni-park.html">Vozni Park</a><a href="rezervacija-vozila.html" class="active">Rezervacija Vozila</a><a href="cenovnik.html">Cenovnik</a><a href="#">Novosti</a><a href="#">Blog</a><a href="#">Kontakt</a></div><button class="menu" type="button" id="menuBtn">Menu</button>
+    <div class="navlinks" id="primary-navigation"><a href="index.html">Početna</a><a href="uslovi-najma.html">Uslovi najma</a><a href="vozni-park.html">Vozni park</a><a href="rezervacija-vozila.html" class="active" aria-current="page">Rezervacija vozila</a><a href="cenovnik.html">Cenovnik</a><a href="index.html#blog">Blog</a><a href="#kontakt">Kontakt</a></div><button class="menu" type="button" aria-label="Otvori meni" aria-controls="primary-navigation" aria-expanded="false">Meni</button>
   </nav></div>
 </header>
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-content reveal">
       <h1>Rezervacija vozila</h1>
-      <p>Rezervisite vase vozilo</p>
+      <p>Rezervišite svoje vozilo</p>
       <form class="reservation-box" id="reservationForm">
-        <div class="field"><label>Pickup &amp; return</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16v2a2 2 0 0 1-2 2h-1a3 3 0 0 1-6 0H9a3 3 0 0 1-6 0H2V8l3-4h10l3 4h2a2 2 0 0 1 2 2v6Z"/><circle cx="6" cy="20" r="1"/><circle cx="16" cy="20" r="1"/></svg><select id="pickup"><option>Belgrade Airport</option><option>Belgrade City Center</option><option>Hotel delivery</option><option>Nikola Tesla Airport</option></select><svg class="right-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></div>
-        <div class="field"><label>Pickup Date</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="pickupDate" type="date" value="2026-01-19"></div></div>
-        <div class="field"><label>Flight Number</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 9V5a2 2 0 0 1 4 0v4m-9 3h14v7H5z"/><path d="m8 15 2 2 4-4"/></svg><input id="flight" type="text" value="321" placeholder="Flight number"></div></div>
-        <div class="field"><label>Pickup Time</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><input id="pickupTime" type="time" value="09:00"></div></div>
-        <div class="field"><label>Return Date</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="returnDate" type="date" value="2026-01-23"></div></div>
-        <div class="field"><label>Return Time</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><input id="returnTime" type="time" value="12:00"></div></div>
+        <div class="field"><label>Preuzimanje i vraćanje</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16v2a2 2 0 0 1-2 2h-1a3 3 0 0 1-6 0H9a3 3 0 0 1-6 0H2V8l3-4h10l3 4h2a2 2 0 0 1 2 2v6Z"/><circle cx="6" cy="20" r="1"/><circle cx="16" cy="20" r="1"/></svg><select id="pickup"><option>Aerodrom Nikola Tesla</option><option>Centar Beograda</option><option>Dostava do hotela</option></select><svg class="right-icon" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></div></div>
+        <div class="field"><label>Datum preuzimanja</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="pickupDate" type="date" value="2026-01-19"></div></div>
+        <div class="field"><label>Broj leta</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 9V5a2 2 0 0 1 4 0v4m-9 3h14v7H5z"/><path d="m8 15 2 2 4-4"/></svg><input id="flight" type="text" value="321" placeholder="Broj leta"></div></div>
+        <div class="field"><label>Vreme preuzimanja</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><input id="pickupTime" type="time" value="09:00"></div></div>
+        <div class="field"><label>Datum vraćanja</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><input id="returnDate" type="date" value="2026-01-23"></div></div>
+        <div class="field"><label>Vreme vraćanja</label><div class="fake-input"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><input id="returnTime" type="time" value="12:00"></div></div>
       </form>
-      <button class="reserve-hero" type="button" id="topReserve">Rezervisite <span>→</span></button>
+      <button class="reserve-hero" type="button" id="topReserve">Rezervišite <span>→</span></button>
     </div>
   </div>
   <div class="hero-car-wrap">
@@ -45,8 +47,8 @@
     <div class="section-head reveal"><h2>Izbor vozila</h2><p>Izaberite klasu i vozilo</p></div>
     <div class="filters reveal">
       <div class="filter-left">
-        <label class="pill-select"><select id="classFilter"><option value="all">Klasa: A</option><option value="SUV">Klasa: SUV</option><option value="A">Klasa: A</option><option value="B">Klasa: B</option><option value="F">Klasa: F</option><option value="G">Klasa: G</option></select></label>
-        <label class="pill-select"><select id="fuelFilter"><option value="all">Benzin</option><option value="Benzin">Benzin</option><option value="Dizel">Dizel</option></select></label>
+        <label class="pill-select"><select id="classFilter"><option value="all">Klasa: Sve</option><option value="E">Klasa: E</option><option value="F">Klasa: F</option><option value="G">Klasa: G</option><option value="H">Klasa: H</option></select></label>
+        <label class="pill-select"><select id="fuelFilter"><option value="all">Gorivo: Sve</option><option value="Benzin">Benzin</option><option value="Dizel">Dizel</option></select></label>
       </div>
       <div class="toggle" id="autoToggle" role="button" tabindex="0"><span>Automatik</span><span class="switch"></span></div>
     </div>
@@ -54,7 +56,7 @@
   </div>
 </main>
 <div class="selected-panel" id="selectedPanel"><strong id="selectedTitle">Vozilo izabrano</strong><p id="selectedInfo">Nastavite sa rezervacijom.</p></div>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>Unirent je zatvoreni alternativni investicioni fond registrovan u Republici Srbiji kojim upravlja društvo za upravljanje alternativnim investicionim fondovima Capital Partners d.o.o. Više informacija možete pronaći ovde.</p><div class="social"><span>f</span><span>in</span></div></div><div class="foot-links"><div><strong>O nama</strong><a href="uslovi-najma.html">Uslovi najma</a><a href="cenovnik.html">Cenovnik</a><a href="rezervacija-vozila.html">Rezervacija</a></div><div><a href="#">Kontakt</a><a href="#">Blog</a><a href="vozni-park.html">Vozni park</a><a href="#">Unirent klub</a></div></div></div><div class="watermark">UniRent</div></div><div class="copy"><div class="container">© 2025 UniRent, Inc. All rights reserved.</div></div></footer>
+<footer id="kontakt" class="footer"><div class="container"><div class="footer-grid"><div><h3>UniRent</h3><p>UniRent je rent-a-car agencija za pouzdan najam vozila u Beogradu i širom Srbije. Bez skrivenih troškova, uz 24/7 podršku na putu i jasne uslove najma.</p><div class="social"><span>f</span><span>in</span></div></div><div class="foot-links"><div><strong>O nama</strong><a href="uslovi-najma.html">Uslovi najma</a><a href="cenovnik.html">Cenovnik</a><a href="rezervacija-vozila.html">Rezervacija</a></div><div><a href="#kontakt">Kontakt</a><a href="index.html#blog">Blog</a><a href="vozni-park.html">Vozni park</a></div></div></div><div class="watermark">UniRent</div></div><div class="copy"><div class="container">© 2025 UniRent. Sva prava zadržana.</div></div></footer>
 <script>
 const cars=[
 {name:'Hyundai Santa Fe 4x4',cls:'G',fuel:'Dizel',auto:true,img:'assets/cars/hyundai-santa-fe.png'},
@@ -69,11 +71,13 @@ const grid=document.getElementById('carGrid'), classFilter=document.getElementBy
 function slotText(path){return 'Place '+path+' here'}
 function renderCars(){
  const cls=classFilter.value, fuel=fuelFilter.value;
- const visible=cars.filter(c=>(cls==='all'||c.cls===cls||cls==='SUV')&&(fuel==='all'||c.fuel===fuel)&&(!autoOnly||c.auto));
- grid.innerHTML=visible.map(c=>`<article class="car-card reveal in" data-name="${c.name}"><div class="car-title">${c.name}</div><div class="car-class">Klasa automobila: ${c.cls}</div><div class="tags"><span class="tag">${c.fuel}</span><span class="tag">Automatik</span><span class="tag">5 Vrata</span></div><div class="car-img-zone"><img src="${c.img}" alt="${c.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="slot" style="display:none">${slotText(c.img)}</div></div><div class="price"><strong>od $41</strong><span>Cena do 31 Mar</span></div><button class="card-btn" type="button" onclick="selectCar('${c.name.replace(/'/g,"\\'")}')">Rezervisi →</button></article>`).join('') || `<div style="grid-column:1/-1;text-align:center;background:#fff;border-radius:18px;padding:40px;font-weight:800;color:#777">Nema vozila za izabrane filtere.</div>`;
+ const visible=cars.filter(c=>(cls==='all'||c.cls===cls)&&(fuel==='all'||c.fuel===fuel)&&(!autoOnly||c.auto));
+ grid.innerHTML=visible.map(c=>`<article class="car-card reveal in" data-name="${c.name}"><div class="car-title">${c.name}</div><div class="car-class">Klasa automobila: ${c.cls}</div><div class="tags"><span class="tag">${c.fuel}</span><span class="tag">Automatik</span><span class="tag">5 vrata</span></div><div class="car-img-zone"><img src="${c.img}" alt="${c.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="slot" style="display:none">${slotText(c.img)}</div></div><div class="price"><strong>od 41 €</strong><span>Cena do 31. mar</span></div><button class="card-btn" type="button" onclick="selectCar('${c.name.replace(/'/g,"\\'")}')">Rezerviši →</button></article>`).join('') || `<div style="grid-column:1/-1;text-align:center;background:#fff;border-radius:18px;padding:40px;font-weight:800;color:#777">Nema vozila za izabrane filtere.</div>`;
 }
 function selectCar(name){document.getElementById('selectedTitle').textContent=name;document.getElementById('selectedInfo').textContent='Vozilo je izabrano. Proverite datume i pošaljite rezervaciju.';document.getElementById('selectedPanel').classList.add('show');setTimeout(()=>document.getElementById('selectedPanel').classList.remove('show'),3600)}
 autoToggle.addEventListener('click',()=>{autoOnly=!autoOnly;autoToggle.classList.toggle('off',!autoOnly);renderCars()});autoToggle.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();autoToggle.click()}});classFilter.addEventListener('change',renderCars);fuelFilter.addEventListener('change',renderCars);document.getElementById('topReserve').addEventListener('click',()=>document.querySelector('.fleet-section').scrollIntoView({behavior:'smooth'}));
 const reveal=()=>document.querySelectorAll('.reveal').forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight-70)el.classList.add('in')});addEventListener('scroll',reveal,{passive:true});renderCars();reveal();
 </script>
+<script src="unirent-fixes.js"></script>
+<script src="unirent-v2.js"></script>
 </body></html>
